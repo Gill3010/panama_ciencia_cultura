@@ -7,16 +7,15 @@ class LanguageSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final languageProvider = Provider.of<LanguageProvider>(context);
+    final languageProvider =
+        Provider.of<LanguageProvider>(context, listen: false);
 
     return IconButton(
       icon: const Icon(Icons.language),
       onPressed: () {
         languageProvider.toggleLanguage();
       },
-      tooltip: languageProvider.currentLocale.languageCode == 'es'
-          ? 'Switch to English'
-          : 'Cambiar a Español',
+      tooltip: 'Cambiar idioma',
     );
   }
 }

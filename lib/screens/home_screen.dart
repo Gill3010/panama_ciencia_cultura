@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panama_ciencia_cultura/widgets/language_switch.dart';
+import 'package:panama_ciencia_cultura/l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,7 +9,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Panamá Ciencia y Cultura'),
+        title: Text(
+          AppLocalizations.of(context)?.translate('appTitle') ??
+              'Panamá Ciencia y Cultura',
+        ),
         actions: const [LanguageSwitch()],
       ),
       body: Column(
@@ -16,11 +20,19 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                _buildHeroSection(),
-                _buildSectionTitle('Destinos Populares'),
-                _buildDestinationsPreview(),
-                _buildSectionTitle('Experiencias Únicas'),
-                _buildExperiencesPreview(),
+                _buildHeroSection(context),
+                _buildSectionTitle(
+                  AppLocalizations.of(context)
+                          ?.translate('popularDestinations') ??
+                      'Destinos Populares',
+                ),
+                _buildDestinationsPreview(context),
+                _buildSectionTitle(
+                  AppLocalizations.of(context)
+                          ?.translate('uniqueExperiences') ??
+                      'Experiencias Únicas',
+                ),
+                _buildExperiencesPreview(context),
               ],
             ),
           ),
@@ -30,7 +42,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildHeroSection() {
+  Widget _buildHeroSection(BuildContext context) {
     return Container(
       height: 250,
       decoration: BoxDecoration(
@@ -51,7 +63,8 @@ class HomeScreen extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Descubre Panamá',
+            AppLocalizations.of(context)?.translate('discoverPanama') ??
+                'Descubre Panamá',
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
@@ -73,29 +86,31 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildDestinationsPreview() {
+  Widget _buildDestinationsPreview(BuildContext context) {
     return SizedBox(
       height: 200,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           _buildPlaceholderCard(
-            'Canal de Panamá',
+            AppLocalizations.of(context)?.translate('canalDePanama') ??
+                'Canal de Panamá',
             customImageUrl:
                 'https://images.unsplash.com/photo-1650900426337-0f7c0e0f86ea?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           ),
           _buildPlaceholderCard(
-            'Casco Antiguo',
+            AppLocalizations.of(context)?.translate('cascoAntiguo') ??
+                'Casco Antiguo',
             customImageUrl:
                 'https://media.istockphoto.com/id/2166784461/photo/panama-panama-city-historic-center-casco-viejo-colorful-streets-and-colonial-architecture.jpg?s=2048x2048&w=is&k=20&c=Fai2PI6-nYPD2_pAXU42O3lI8sr_yS7EOk8gGlKXR5I=',
           ),
           _buildPlaceholderCard(
-            'Biomuseo',
+            AppLocalizations.of(context)?.translate('biomuseo') ?? 'Biomuseo',
             customImageUrl:
                 'https://images.unsplash.com/photo-1717434172884-21ab9ae0e011?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           ),
           _buildPlaceholderCard(
-            'San Blas',
+            AppLocalizations.of(context)?.translate('sanBlas') ?? 'San Blas',
             customImageUrl:
                 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&h=300&fit=crop',
           ),
@@ -104,29 +119,33 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildExperiencesPreview() {
+  Widget _buildExperiencesPreview(BuildContext context) {
     return SizedBox(
       height: 200,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           _buildPlaceholderCard(
-            'Tour Científico',
+            AppLocalizations.of(context)?.translate('scientificTour') ??
+                'Tour Científico',
             customImageUrl:
                 'https://media.istockphoto.com/id/2187788556/photo/boat-trip-to-the-island.jpg?s=2048x2048&w=is&k=20&c=DDcHjYHFUpFuuZt-tvbFDpF9LNXmGv5turZMoR11Z8Q=',
           ),
           _buildPlaceholderCard(
-            'Experiencia Gastronómica',
+            AppLocalizations.of(context)?.translate('gastronomicExperience') ??
+                'Experiencia  Gastronómica',
             customImageUrl:
                 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop',
           ),
           _buildPlaceholderCard(
-            'Tour Cultural',
+            AppLocalizations.of(context)?.translate('culturalTour') ??
+                'Tour Cultural',
             customImageUrl:
                 'https://media.istockphoto.com/id/1426692024/photo/local-tour-guide-walking-and-pointing-toward-the-skyline-with-a-group-of-cheerful-fashionable.jpg?s=2048x2048&w=is&k=20&c=rWgWv4l9f7bencCKcV2AivjQxfSeAga_VqhBijKMmsE=',
           ),
           _buildPlaceholderCard(
-            'Aventura Natural',
+            AppLocalizations.of(context)?.translate('naturalAdventure') ??
+                'Aventura Natural',
             customImageUrl:
                 'https://media.istockphoto.com/id/2169434495/photo/aerial-view-of-the-summit-at-bar%C3%BA-volcano-chriqui-panama-stock-photo.jpg?s=2048x2048&w=is&k=20&c=UWvv-z8QFJtq3CLOx0TuspxxvOzHU060J8irYoKEhaI=',
           ),
@@ -198,21 +217,36 @@ class HomeScreen extends StatelessWidget {
 
   BottomNavigationBar _buildBottomNavBar(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Color(0xFF0077B6), // ← Azul turístico de Panamá
+      backgroundColor: Color(0xFF0077B6),
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white.withOpacity(0.7),
       selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
       unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
       type: BottomNavigationBarType.fixed,
       currentIndex: 0,
-      items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-        BottomNavigationBarItem(icon: Icon(Icons.place), label: 'Destinos'),
+      items: [
         BottomNavigationBarItem(
-            icon: Icon(Icons.explore), label: 'Experiencias'),
+          icon: Icon(Icons.home),
+          label: AppLocalizations.of(context)?.translate('home') ?? 'Inicio',
+        ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart), label: 'Carrito'),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Cuenta'),
+          icon: Icon(Icons.place),
+          label: AppLocalizations.of(context)?.translate('destinations') ??
+              'Destinos',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.explore),
+          label: AppLocalizations.of(context)?.translate('experiences') ??
+              'Experiencias',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_cart),
+          label: AppLocalizations.of(context)?.translate('cart') ?? 'Carrito',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: AppLocalizations.of(context)?.translate('account') ?? 'Cuenta',
+        ),
       ],
       onTap: (index) {
         switch (index) {

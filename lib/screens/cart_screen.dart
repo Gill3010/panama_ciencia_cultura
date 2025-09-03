@@ -22,17 +22,17 @@ class CartScreen extends StatelessWidget {
                 _buildCartItem(
                   'Tour del Canal de Panamá',
                   '85.00',
-                  'https://via.placeholder.com/100x100/0077B6/FFFFFF?text=Tour+Canal',
+                  'https://media.istockphoto.com/id/1293532847/photo/close-up-of-trusses-and-suspension-bridge-rigging-along-the-waterways-of-the-locks-of-the.jpg?s=2048x2048&w=is&k=20&c=Htnn1JCoP9IT3DaHVRGXl-_CXHGT6qtvfCGDtezWztM=',
                 ),
                 _buildCartItem(
                   'Experiencia Gastronómica Casco Antiguo',
                   '120.00',
-                  'https://via.placeholder.com/100x100/0077B6/FFFFFF?text=Gastronomía',
+                  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop',
                 ),
                 _buildCartItem(
                   'Entrada Biomuseo',
                   '18.00',
-                  'https://via.placeholder.com/100x100/0077B6/FFFFFF?text=Biomuseo',
+                  'https://media.istockphoto.com/id/2206213068/photo/vue-de-la-ville.jpg?s=2048x2048&w=is&k=20&c=MPD7fzFHfzwIWEogVa68ChZGTahN6dgrKQL7vNACXJI=',
                 ),
               ],
             ),

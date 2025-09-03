@@ -16,22 +16,22 @@ class DestinationsScreen extends StatelessWidget {
           _buildDestinationCard(
             'Canal de Panamá',
             'Una maravilla de la ingeniería moderna.',
-            'https://via.placeholder.com/600x400/0077B6/FFFFFF?text=Canal+de+Panamá',
+            'https://media.istockphoto.com/id/115915864/photo/ships-entering-panama-canal-at-gatun-locks.jpg?s=2048x2048&w=is&k=20&c=mDRRotkg06646a2z2AVObKRselVDdwGYGdVnuYCnerQ=',
           ),
           _buildDestinationCard(
             'Casco Antiguo',
             'Historia y cultura en el centro de la ciudad.',
-            'https://via.placeholder.com/600x400/0077B6/FFFFFF?text=Casco+Antiguo',
+            'https://images.unsplash.com/photo-1705350007200-816e367f96b7?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           ),
           _buildDestinationCard(
             'Biomuseo',
             'Diseñado por Frank Gehry, muestra la biodiversidad de Panamá.',
-            'https://via.placeholder.com/600x400/0077B6/FFFFFF?text=Biomuseo',
+            'https://images.unsplash.com/photo-1717434172884-21ab9ae0e011?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           ),
           _buildDestinationCard(
             'San Blas',
             'Playas paradisíacas y cultura Guna Yala.',
-            'https://via.placeholder.com/600x400/0077B6/FFFFFF?text=San+Blas',
+            'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&h=300&fit=crop',
           ),
           // NOTA PARA FUTURAS EXPANSIONES:
           // Aquí se conectarán los destinos desde una API o base de datos

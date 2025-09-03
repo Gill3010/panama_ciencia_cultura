@@ -1,0 +1,20 @@
+{
+  "@@locale": "es",
+  "appTitle": "Panamá Ciencia y Cultura",
+  "discoverPanama": "Descubre Panamá",
+  "popularDestinations": "Destinos Populares",
+  "uniqueExperiences": "Experiencias Únicas",
+  "home": "Inicio",
+  "destinations": "Destinos",
+  "experiences": "Experiencias",
+  "cart": "Carrito",
+  "account": "Cuenta",
+  "canalDePanama": "Canal de Panamá",
+  "cascoAntiguo": "Casco Antiguo",
+  "biomuseo": "Biomuseo",
+  "sanBlas": "San Blas",
+  "scientificTour": "Tour Científico",
+  "gastronomicExperience": "Experiencia Gastronómica",
+  "culturalTour": "Tour Cultural",
+  "naturalAdventure": "Aventura Natural"
+}
